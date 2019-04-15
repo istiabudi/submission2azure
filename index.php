@@ -70,7 +70,7 @@ catch (PDOException $e) {
 
     if (isset($_POST['submit'])) {
         try {
-            $name = $_POST['nama'];
+            $nama = $_POST['nama'];
             $nim = $_POST['nim'];
             $nik = $_POST['nik'];
             $date = date("Y-m-d");
