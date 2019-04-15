@@ -34,7 +34,7 @@
             <div class="uk-margin uk-width-1-2@s">
                 <label class="uk-form-label" for="form-stacked-text">NAMA</label>
                 <div class="uk-form-control">
-                    <input class="uk-input" id="form-stacked-text" type="text" name="name" id="name"/>
+                    <input class="uk-input" id="form-stacked-text" type="text" name="nama" id="nama"/>
                 </div>
             </div>
 
@@ -70,15 +70,15 @@ catch (PDOException $e) {
 
     if (isset($_POST['submit'])) {
         try {
-            $name = $_POST['name'];
+            $name = $_POST['nama'];
             $nim = $_POST['nim'];
             $nik = $_POST['nik'];
             $date = date("Y-m-d");
             // Insert data
-            $sql_insert = "INSERT INTO Absensi (name, nim, nik, date) 
+            $sql_insert = "INSERT INTO Absensi (nama, nim, nik, date) 
                         VALUES (?,?,?,?)";
             $stmt = $conn->prepare($sql_insert);
-            $stmt->bindValue(1, $name);
+            $stmt->bindValue(1, $nama);
             $stmt->bindValue(2, $nim);
             $stmt->bindValue(3, $nik);
             $stmt->bindValue(4, $date);
@@ -95,12 +95,12 @@ catch (PDOException $e) {
             if(count($registrants) > 0) {
                 echo "<h2>People who are registered:</h2>";
                 echo "<table>";
-                echo "<tr><th>Name</th>";
+                echo "<tr><th>Nama</th>";
                 echo "<th>Nim</th>";
                 echo "<th>Nik</th>";
                 echo "<th>Date</th></tr>";
                 foreach($registrants as $registrant) {
-                    echo "<tr><td>".$registrant['name']."</td>";
+                    echo "<tr><td>".$registrant['nama']."</td>";
                     echo "<td>".$registrant['nim']."</td>";
                     echo "<td>".$registrant['nik']."</td>";
                     echo "<td>".$registrant['date']."</td></tr>";
