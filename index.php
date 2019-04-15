@@ -41,14 +41,14 @@
             <div class="uk-margin uk-width-1-2@s">
                 <label class="uk-form-label" for="form-stacked-text">Email</label>
                 <div class="uk-form-control">
-                    <input class="uk-input" id="form-stacked-text" type="text" name="email" id="email"/>
+                    <input class="uk-input" id="form-stacked-text" type="text" name="nim" id="nim"/>
                 </div>
             </div>
 
             <div class="uk-margin uk-width-1-2@s">
                 <label class="uk-form-label" for="form-stacked-text">Job</label>
                 <div class="uk-form-control">
-                    <input class="uk-input" id="form-stacked-text" type="text" name="job" id="job"/>
+                    <input class="uk-input" id="form-stacked-text" type="text" name="nik" id="nik"/>
                 </div>
             </div>
             
