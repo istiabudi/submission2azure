@@ -32,21 +32,21 @@
         <p>Isi Data yang Nama, NIM and NIK, then click <strong>Submit</strong> to register.</p>
         <form method="post" action="index.php" enctype="multipart/form-data" class="uk-form-stacked">
             <div class="uk-margin uk-width-1-2@s">
-                <label class="uk-form-label" for="form-stacked-text">Name</label>
+                <label class="uk-form-label" for="form-stacked-text">NAMA</label>
                 <div class="uk-form-control">
                     <input class="uk-input" id="form-stacked-text" type="text" name="name" id="name"/>
                 </div>
             </div>
 
             <div class="uk-margin uk-width-1-2@s">
-                <label class="uk-form-label" for="form-stacked-text">Email</label>
+                <label class="uk-form-label" for="form-stacked-text">NIM</label>
                 <div class="uk-form-control">
                     <input class="uk-input" id="form-stacked-text" type="text" name="nim" id="nim"/>
                 </div>
             </div>
 
             <div class="uk-margin uk-width-1-2@s">
-                <label class="uk-form-label" for="form-stacked-text">Job</label>
+                <label class="uk-form-label" for="form-stacked-text">NIK</label>
                 <div class="uk-form-control">
                     <input class="uk-input" id="form-stacked-text" type="text" name="nik" id="nik"/>
                 </div>
