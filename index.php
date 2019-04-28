@@ -60,7 +60,7 @@
  <?php
 // PHP Data Objects(PDO) Sample Code:
 try {
-    $conn = new PDO("sqlsrv:server = tcp:dicodingkotabpn.database.windows.net,1433; Database = dicodingbpn", "dicodingbpn", "B4l!kp4p4n");
+    $conn = new PDO("sqlsrv:server = tcp:azurebejo.database.windows.net,1433; Database = azureisb", "adminbejo", "B3jo2019");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
@@ -75,7 +75,7 @@ catch (PDOException $e) {
             $nik = $_POST['nik'];
             $date = date("Y-m-d");
             // Insert data
-            $sql_insert = "INSERT INTO Absensi (nama, nim, nik, date) 
+            $sql_insert = "INSERT INTO absensi (nama, nim, nik, date) 
                         VALUES (?,?,?,?)";
             $stmt = $conn->prepare($sql_insert);
             $stmt->bindValue(1, $nama);
@@ -89,7 +89,7 @@ catch (PDOException $e) {
         echo "<h3>Your're registered!</h3>";
     } else if (isset($_POST['load_data'])) {
         try {
-            $sql_select = "SELECT * FROM Absensi";
+            $sql_select = "SELECT * FROM absensi";
             $stmt = $conn->query($sql_select);
             $registrants = $stmt->fetchAll(); 
             if(count($registrants) > 0) {
