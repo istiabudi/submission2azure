@@ -11,14 +11,14 @@ use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 $connectionString = "DefaultEndpointsProtocol=https;AccountName=azurebejo;AccountKey=lUAaDVuJkw4mR793S4YJxLEsu+izo9kI+t/ZCMWTfN1ArphX2UJAgHxsMp31Icpqu84M5VUpq312abNQHK6l4g==;EndpointSuffix=core.windows.net";
 $containerName = "blobistia";
 // Create blob client.
-$blobClient = BlobRestProxy::createBlobService($connectionString);
-if (isset($_POST['submit'])) {
-	$fileToUpload = strtolower($_FILES["fileToUpload"]["name"]);
-	$content = fopen($_FILES["fileToUpload"]["tmp_name"], "r");
-	// echo fread($content, filesize($fileToUpload));
-	$blobClient->createBlockBlob($containerName, $fileToUpload, $content);
-	header("Location: analyze.php");
-}
+//$blobClient = BlobRestProxy::createBlobService($connectionString);
+//if (isset($_POST['submit'])) {
+//	$fileToUpload = strtolower($_FILES["fileToUpload"]["name"]);
+//	$content = fopen($_FILES["fileToUpload"]["tmp_name"], "r");
+//	// echo fread($content, filesize($fileToUpload));
+//	$blobClient->createBlockBlob($containerName, $fileToUpload, $content);
+//	header("Location: analyze.php");
+//}
 //$listBlobsOptions = new ListBlobsOptions();
 //$listBlobsOptions->setPrefix("");
 //$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
