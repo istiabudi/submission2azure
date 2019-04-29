@@ -19,9 +19,9 @@ if (isset($_POST['submit'])) {
 	$blobClient->createBlockBlob($containerName, $fileToUpload, $content);
 	header("Location: analyze.php");
 }
-$listBlobsOptions = new ListBlobsOptions();
-$listBlobsOptions->setPrefix("");
-$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
+//$listBlobsOptions = new ListBlobsOptions();
+//$listBlobsOptions->setPrefix("");
+//$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 ?>
 
 <!DOCTYPE html>
